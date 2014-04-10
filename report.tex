@@ -44,8 +44,13 @@ In this paper, we aim to provide a general outline of our study of Popular Match
 \section{Introduction}
 \subsection{Matchings to Popular Matchings}
 
-In this paper, we discuss  matchings in a bipartite graph G, with vertices $\in$ A\cupP, and edges of the form (a,b):\lbrace a $\in$ A, b $\in$ P\rbrace. For every one of the vertices in A, corresponding to an Applicant, we have a preference list $P_a$, which contains a rank assignment to every one of the edges incident on it. These lists make divide the edges of the graph into sets according to their preferences, $E_1$ denoting the set of all edges which have been given rank 1 by any of the vertices neighbouing it. This holds for the corresponding edge sets $E_2, E_3 \cdots E_n$. These preference lists indicate the choice of each of the Applicants, in the set A. When we say that an applicant A prefers edge $e_a$ to edge $e_b$, we mean that $e_a$ appears higher than $e_b$  in the preference list of A, or that $b \> a$.  
-
+In this paper, we discuss  matchings in a bipartite graph G(V,E), with V $=$ A\cupP, and E $=$ (a,b):\lbrace a $\in$ A, b $\in$ P\rbrace. 
+For every one of the vertices in A, corresponding to an Applicant, we have a preference list $P_a$,
+which denote the posts to which he/she would like to be matched, and ordered according to their preference betweent the various posts. In the graph G, this corresponds to edges between vertices in A and those in P. 
+Consider the preference lists across all applicants in A. 
+We construct a subset of edges, namely, $E_1$ corresponding to all the edges which have been assigned preference/rank 1 by any of the applicants. 
+This construction can be extended to all the edges in the graph, thus, we may have subsets denoted by $E_2, E_3, \cdots$ 
+Between the posts preferred by a particular applicant, the subscript of the edge denotes the rank/preference of the post. So, $e_1$ would be a edge/post preferred more than $e_2$.
 
 
 
