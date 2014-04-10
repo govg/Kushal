@@ -43,20 +43,38 @@ In this paper, we aim to provide a general outline of our study of Popular Match
 \section{Introduction}
 \subsection{Matchings to Popular Matchings}
 
-In this paper, we discuss  matchings in a bipartite graph G(V,E), with V $=$ A\cupP, and E $=$ (a,b):\lbrace a $\in$ A, b $\in$ P\rbrace. 
-For every one of the vertices in A, corresponding to an Applicant, we have a preference list $P_a$,
-which denote the posts to which he/she would like to be matched, and ordered according to their preference betweent the various posts. In the graph G, this corresponds to edges between vertices in A and those in P. 
-Consider the preference lists across all applicants in A. 
-We construct a subset of edges, namely, $E_1$ corresponding to all the edges which have been assigned preference/rank 1 by any of the applicants. 
-This construction can be extended to all the edges in the graph, thus, we may have subsets denoted by $E_2, E_3, \cdots$ 
-Between the posts preferred by a particular applicant, the subscript of the edge denotes the rank/preference of the post. So, $e_1$ would be a edge/post preferred more than $e_2$.
-We call a preference list strict, when for each preference, only one post is listed. Correspondingly, for each vertex in A, there is only on edge which has the first preferece, only one which has the second, and so on. The compliment to this is the case of ties. In the case of preferences with ties, more than one post may be listed as being the $n^th$ preference of any of the applicants.
+In this paper, we discuss  matchings in a bipartite graph G, with vertices $\in A\cup P$, and edges of the form $(a,b):\lbrace a \in A, b \in P\rbrace$. For every one of the vertices in A, corresponding to an Applicant, we have a preference list $P_a$, which contains a rank assignment to every one of the edges incident on it. These lists make divide the edges of the graph into sets according to their preferences, $E_1$ denoting the set of all edges which have been given rank 1 by any of the vertices neighbouing it. This holds for the corresponding edge sets $E_2, E_3 \cdots E_n$. These preference lists indicate the choice of each of the Applicants, in the set A. When we say that an applicant A prefers edge $e_a$ to edge $e_b$, we mean that $e_a$ appears higher than $e_b$  in the preference list of A, or that $b \> a$.  
 
 
-An applicant, therefore, can be said to prefer a matching $M_1$ to a matching $M_2$ if he prefers the post assigned in $M_1$ to his post in  $M_2$.  
 
-A matching $M_1$ is said to \emph{more popular} than matching $M_2$ is the number of applicants who prefer $M_1$ to $M_2$ are strictly more than those who prefer $M_2$ to $M_1$ .  
-Note that some of the applicants may be indifferent between the two matchings 
+
+
+
+
+
+%define matchings maybe---make it clear that an applicant may have no matched post in matching, and define waht %M(a) is 
+Consider a matching $M$ in $G$, the given graph instance. For a matched vertex $v$, we use $M(v)$ to represent the matched vertex of $v$ in $M$. 
+
+An applicant, therefore, can be said to prefer a matching $M_1$ to a matching $M_2$ if 
+\begin{itemize}
+\item he/she prefers $M_1(a)$ to  $M_2(a)$
+\item he/she is unmatched in $M_2$ and is matched in $M_1$
+\end{itemize}
+
+An applicant $a$ is indifferent between the two matchings, if  $r_a(M_1(a)) = r_b(M_2(a))$.
+% ALso mention the the case where he may be unmatched in one of the matching  
+
+A matching $M_1$ is said to \emph{more popular} than matching $M_2$, represented as $M_1 \succ M_2$, if the number of applicants who prefer $M_1$ to $M_2$ are strictly more than those who prefer $M_2$ to $M_1$ .  
+%Is the following line neccessary ?
+
+
+A matching $M$ is said to be \emph{popular}, if there does not exist any matching $M_1$ which is \emph{more popular} than $M$.  
+
+An instance of the popular matching problem can have zero or more popular matchings. 
+
+
+
+
 
 
 
