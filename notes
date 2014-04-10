@@ -1,6 +1,36 @@
+Outline:
 
+Introduction
+	
+	Related work
+	Organization of the paper
+
+
+Introduction:
+
+Start with definition of matchings, instance of the problem.
+Define the graph, the vertices, and so on.
+Preference lists, applicants, posts
+Polytime Algorithm for finding a popular matching
+
+
+
+Papers:
+
+Voting paths, existence of 2 path
+Popular Matchings, the original.
+Popular Matchings, structures and algorithms
+Capacitated House Allocation 
+Cheating Strategies
 
 After introduction:
+
+Techniques : 
+
+Hungarian Trees
+Gallai Edmonds Decomposition
+Switching Graphs
+Signature of Popular Matchings
 
 
 Static v/s Dynamic
